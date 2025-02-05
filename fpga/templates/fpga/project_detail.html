@@ -1,0 +1,84 @@
+{% extends "fpga/base.html" %}
+{% load static %}
+{% block title %}Проект {{ projectfpga.title }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="card mb-5 bg-projectdetail">
+        <div class="row g-0">
+            <div class="card-body">
+                <h2 class="card-title">{{projectfpga.title}}</h2>
+                <p align="justify" class="card-text"><u>Автор:</u> {{projectfpga.autor}}</p>
+                <p align="justify" class="card-text">{{projectfpga.description}}</p>
+
+                {%comment%}ссылки к проекту {%endcomment%}
+                <div class="project-link-all">
+                    {% if projectfpga.link_gh %}
+                    <p align="start" class="card-text">
+                        <a class="project-link" href="{{projectfpga.link_gh}}">Проект на GitHub <img src="{% static 'fpga/img/icon_github.png' %}" alt="github"></a>
+                    </p>
+                    {% endif %}
+
+                    {% if projectfpga.link_yb %}
+                    <p align="start" class="card-text">
+                        <a class="project-link" href="{{projectfpga.link_yb}}">Проект на Youtube <img src="{% static 'fpga/img/icon_youtube.png' %}" alt="youtube"></a>
+                    </p>
+                    {% endif %}
+
+                    {% if projectfpga.link_web %}
+                    <p align="start" class="card-text">
+                        <a class="project-link" href="{{projectfpga.link_web}}">Проект на web-сайте: <u>{{projectfpga.link_web}}</u></a>
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+
+            {% comment %}картинки к проекту {% endcomment %}
+            <div class="col-md-4 d-flex justify-content-between align-items-center">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="ms-2 mb-2">
+                            {% if projectfpga.image_1 %}
+                            <img class="img-fluid project-img" src="{{ projectfpga.image_1.url }}" alt="Тут изображение {{ projectfpga.title }}">
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex justify-content-between align-items-center">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="ms-2 me-2 mb-2">
+                            {% if projectfpga.image_2 %}
+                            <img class="img-fluid project-img" src="{{projectfpga.image_2.url}}" alt="Тут изображение {{ projectfpga.title }}">
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex justify-content-between align-items-center">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="ms-2 mb-2">
+                            {% if projectfpga.image_3 %}
+                            <img class="img-fluid project-img" src="{{projectfpga.image_3.url}}" alt="Тут изображение {{ projectfpga.title }}">
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            {% comment %}Кнопка перехода к каталогу проектов {% endcomment %}
+            <div class="d-flex justify-content-end align-items-center mb-2">
+                <a href="{% url 'fpga:catalog' %}" class="btn btn-info me-2">В каталог</a>
+            </div>
+
+
+
+
+    </div>
+</div>
+{% endblock content %}

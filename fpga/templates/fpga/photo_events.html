@@ -1,0 +1,59 @@
+{% extends 'fpga/base.html' %}
+{% load static %}
+{% block title %}Фотогалерея{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="zagolovok-page">Фотогалерея</h1>
+
+
+    <div class="row">
+        <div class="col-12">
+
+           <p align="justify" class="main-list">Мы объединяем студентов, интересующихся программированием, организуя различные виды мероприятия, формальные и
+        непринужденные, в течение всего года. </p><br>
+
+            {% comment %}   Paginator каталога фотографий {% endcomment %}
+           <div class="row">
+                <div class="col-12 mb-2">
+                    <nav aria-label="Page navigation" class="text-dark">
+                        <ul class="pagination justify-content-center">
+                            {% if page_obj.has_previous %}
+                            <li class="page-item pagination">
+                                      <a class="page-link btn-info"
+                                   href="?page={{ page_obj.previous_page_number }}">Предыдущая</a>
+
+                            </li>
+                            {% endif %}
+
+                            {% for num in page_obj.paginator.page_range %}
+                            <li class="page-item btn-info {% if page_obj.number == num %}active{% endif %}">
+                               <a class="page-link text-dark"
+                                   href="?page={{ num }}">{{ num }}</a>
+                            </li>
+                            {% endfor %}
+
+                            {% if page_obj.has_next %}
+                            <li class="page-item">
+                           <a class="page-link text-dark btn-info"
+                                                     href="?page={{ page_obj.next_page_number }}">Следующая</a>
+
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+         <div class="col-12">
+            <div class="photo-wrap">
+                    {% for photo_event in photo_events %}
+                    {% include "fpga/include/photo_event_preview.html" %}
+                    {% endfor %}
+            </div>
+         </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% comment %} Краткое представление проекта fpga/templates/fpga/include/photo_event_preview.html {% endcomment %}
+{% load static %}
+{% comment %} здесь код для отображения информации о проекте {% endcomment %}
+<div class="item-photo">
+    <div class="card card-item-photo mb-3 me-5">
+        <div class="row g-0">
+
+            {% comment %} здесь код картинки проекта в карточке {% endcomment %}
+            <div class="d-flex align-items-center justify-content-center">
+                <div class="p-3">
+                {% if photo_event.image_event %}
+                    <img class="img-fluid item-img" src="{{ photo_event.image_event.url }}" alt="Тут изображение {{ projectfpga.title }}">
+                {% endif %}
+                </div>
+            </div>
+
+            <div class="card-body">
+                <p align="center" class="card-text">{{photo_event.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+

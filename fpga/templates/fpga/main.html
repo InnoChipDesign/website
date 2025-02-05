@@ -1,0 +1,80 @@
+{% extends 'fpga/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-3 main-card">
+                <div class="row g-0">
+
+                {% comment %} здесь код для отражения информации {% endcomment %}
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <img align="right" class="img-fluid img-main mt-3 mb-3 ms-3 me-3" src="{% static 'fpga/img/photo_main.jpg' %}" alt="photo_main"">
+                        <h2 align="start" class="main-card-title mb-2">Кто мы?</h2>
+                        <p align="justify" class="main-card-text"> Мы — студенческий клуб FPGA Университета Иннаполис г.Казань. Наша цель -
+                позаботиться обо всех интересах, благополучии и будущей карьере
+                студентов, ориентированных на разработку проектов FPGA, не забывая при этом обо всех веселых и
+                увлекательных студенческих мероприятиях.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<hr>
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-3 main-card">
+                <div class="row g-0">
+
+                {% comment %} здесь код для отражения информации {% endcomment %}
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <img align="left" class="img-fluid img-main mt-3 mb-3 me-3" src="{% static 'fpga/img/matrix.jpg' %}" alt="photo_matrix">
+                        <h2 align="start" class="main-card-title mb-2">О чем все это?</h2>
+                        <p align="justify" class="main-card-text"> «Verilog, ASIC, FPGA» — это не совсем нарицательные слова,
+                            но они находятся в самом сердце революции в микроэлектронике, которая подарила нам смартфоны, быстрый
+                            интернет, 3D-графику и ускорение искусственного интеллекта. В течение последних 40 лет для проектирования логики микросхем
+                            использовался язык описания оборудования Verilog. ASIC (Application Specific Integrated
+                            Circuit) — это сам чип, а FPGA (программируемая вентильная матрица) — это чип, используемый для
+                            прототипирования ASIC.«Verilog, ASIC, FPGA» — это не совсем нарицательные слова, но они
+                            находятся в самом сердце революции в микроэлектронике, которая подарила нам смартфоны, быстрый интернет,
+                            3D-графику и ускорение искусственного интеллекта. В течение последних 40 лет для
+                            проектирования логики микросхем использовался язык описания оборудования Verilog. ASIC (Application
+                            SpecificIntegrated Circuit) — это сам чип, а FPGA (программируемая вентильная матрица) — это чип,
+         используемый для прототипирования ASIC.</p>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<hr>
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-2 main-card">
+                <div class="row g-0">
+
+                {% comment %} здесь код для отражения информации {% endcomment %}
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <img align="right" class="img-fluid img-main mt-3 mb-3 ms-3 me-3" src="{% static 'fpga/img/photo_lab.jpg' %}" alt="photo_lab">
+                        <h2 align="start" class="main-card-title mb-2">Что мы можем Вам предложить?</h2>
+                        <p align="justify" class="main-card-text"> Мы объединяем студентов, интересующихся
+                            FPGA, организуя различные виды мероприятий, формальные и непринужденные, в течение всего года. Кроме того,
+                            мы стремимся создавать интересный и актуальный контент для студентов в наших социальных сетях. Наша цель
+                            - помочь нашим студентам найти желаемую карьеру, продвинуться в учебе и наладить связи с другими
+                            студентами и выпускниками.</p>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
