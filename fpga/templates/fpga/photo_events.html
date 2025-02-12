@@ -1,7 +1,18 @@
 {% extends 'fpga/base.html' %}
 {% load static %}
 {% block title %}Фотогалерея{% endblock %}
-
+{% block head %}
+<meta name="description" content="Фотографии с мероприятий, занятий, семинаров Innopolis Chip Design Club.">
+<meta property="og:title" content="Фотогалерея - Innopolis Chip Design Club">
+<meta property="og:type" content="article">
+<meta property="og:description" content="Фотографии с мероприятий, занятий, семинаров Innopolis Chip Design Club.">
+<meta property="og:site_name" content="innochipdesign.ru">
+<meta property="og:image" content="https://innochipdesign.ru/static/fpga/img/logo.png">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="901">
+<meta property="og:url" content="https://innochipdesign.ru/fpga/photo_events/">
+<meta property="og:locale" content="ru_RU">
+{% endblock %}
 {% block content %}
 <div class="container">
     <h1 class="zagolovok-page">Фотогалерея</h1>
