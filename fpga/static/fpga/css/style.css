@@ -144,25 +144,25 @@ a {
 @media (max-width:500px) {
     .zagolovok {
         font-size: 30px;
-        }
+    }
     .headImg {
         width: 90px;
         height: 85px;
-        }
+
+    }
     .zagolovok-page {
         font-size: 30px;
-        }
+    }
     .main-card-title {
         font-size: 30px;
-        }
+    }
     .main-card-text {
         font-size: 20px;
-        }
+    }
     .main-list {
         font-size: 20px;
     }
     .item-photo {
         width: 100%;
-        }
-
+    }
 }
