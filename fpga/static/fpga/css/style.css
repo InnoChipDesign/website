@@ -19,6 +19,7 @@ main {
     height: 105px;
     border: 0px solid rgb(26, 60, 64);
     margin-top: 20px;
+    
 }
 /*стили для фото на главной странице*/
 .img-main {
@@ -54,12 +55,12 @@ hr {
     font-size: 40px;
     font-weight: bold;
     font-family: Lucida Sans Unicode, Verdana, sans-serif;
-    color: #3c5446;
+    color: #132e23;
 }
 .main-card-text {
     font-size: 22px;
     font-family: Lucida Sans Unicode, Verdana, sans-serif;
-    color: #3c5446;
+    color: #132e23;
 }
 /*стили для footer*/
 .footstyle {
@@ -86,15 +87,7 @@ hr {
 .project-img {
     width: 380px;
     }
-/* стили для изображений в проекте
 
-.project-img {
-    width: 400px;
-    transition: 2s;
-}
-.project-img:hover {
-    transform: scale(1.3);
-}*/
 /* стили для текста карточек*/
 .card-text {
     color: #132e23 !important;
@@ -146,4 +139,30 @@ a {
 }
 .item-img {
     width: 500px;
+}
+
+@media (max-width:500px) {
+    .zagolovok {
+        font-size: 30px;
+        }
+    .headImg {
+        width: 90px;
+        height: 85px;
+        }
+    .zagolovok-page {
+        font-size: 30px;
+        }
+    .main-card-title {
+        font-size: 30px;
+        }
+    .main-card-text {
+        font-size: 20px;
+        }
+    .main-list {
+        font-size: 20px;
+    }
+    .item-photo {
+        width: 100%;
+        }
+
 }
