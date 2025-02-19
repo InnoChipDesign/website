@@ -25,7 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY')
-DEBUG = os.getenv('DEBUG')
+DEBUG = os.getenv('DEBUG', False)
+
+if SECRET_KEY is None:
+    raise ValueError("SECRET_KEY is not found")
+print(f'Running with DEBUG={DEBUG}')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if DEBUG:
